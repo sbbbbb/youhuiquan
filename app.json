@@ -1,0 +1,82 @@
+{
+    "pages": [
+        "hc_pdd/pages/index/index",
+        "hc_pdd/pages/danxhu/danxhu",
+        "hc_pdd/pages/gou/gou",
+        "hc_pdd/pages/ceshi/ceshi",
+        "hc_pdd/pages/geezer/geezer",
+        "hc_pdd/pages/education/education",
+        "hc_pdd/pages/redpacket/redpacket",
+        "hc_pdd/pages/yaoqing/yaoqing",
+        "hc_pdd/pages/details/details",
+        "hc_pdd/pages/danye/danye",
+        "hc_pdd/pages/team/team",
+        "hc_pdd/pages/fuzhi/fuzhi",
+        "hc_pdd/pages/Preferential/Preferential",
+        "hc_pdd/pages/brokerage/brokerage",
+        "hc_pdd/pages/Commissions/Commissions",
+        "hc_pdd/pages/inspector/inspector",
+        "hc_pdd/pages/asked/asked",
+        "hc_pdd/pages/collect/collect",
+        "hc_pdd/pages/register/register",
+        "hc_pdd/pages/Extension/Extension",
+        "hc_pdd/pages/screen/screen",
+        "hc_pdd/pages/classify/classify",
+        "hc_pdd/pages/contactus/contactus",
+        "hc_pdd/pages/search/search",
+        "hc_pdd/pages/qie/qie",
+        "hc_pdd/pages/cash/cash",
+        "hc_pdd/pages/goods/goods",
+        "hc_pdd/pages/Teamdata/Teamdata",
+        "hc_pdd/pages/invite/invite",
+          "hc_pdd/pages/gongzhonghao/invite",
+        "hc_pdd/pages/qi/qi",
+        "hc_pdd/pages/share/share",
+        "hc_pdd/pages/soso/soso",
+        "hc_pdd/pages/groom/groom",
+        "hc_pdd/pages/shezhi/shezhi",
+        "hc_pdd/pages/record/record",
+        "hc_pdd/pages/logs/logs"
+    ],
+      "navigateToMiniProgramAppIdList": [
+        "wx1c3d8485dfbd511c",
+        "wx8d37c9ea1f84453d",
+        "wxe790ee32f50899ce",
+        "wx78caa30cd32c16b9",
+        "wxbbf2caef5c941008",
+        "wxb148650d4ab6c1c4",
+        "wx32540bd863b27570"
+      ],
+    "window": {
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "selectedColor": "#ff7a05",
+        "list": [
+            {
+                "pagePath": "hc_pdd/pages/index/index",
+                "text": "首页",
+                "iconPath": "hc_pdd/resource/images/11.png",
+                "selectedIconPath": "hc_pdd/resource/images/1.png"
+            },
+            {
+                "pagePath": "hc_pdd/pages/groom/groom",
+                "text": "推荐",
+                "iconPath": "hc_pdd/resource/images/tui2.png",
+                "selectedIconPath": "hc_pdd/resource/images/tui1.png"
+            },
+            {
+                "pagePath": "hc_pdd/pages/soso/soso",
+                "text": "超级搜",
+                "iconPath": "hc_pdd/resource/images/chaoji1.png",
+                "selectedIconPath": "hc_pdd/resource/images/chaoji.png"
+            },
+            {
+                "pagePath": "hc_pdd/pages/record/record",
+                "text": "我的",
+                "iconPath": "hc_pdd/resource/images/33.png",
+                "selectedIconPath": "hc_pdd/resource/images/3.png"
+            }
+        ]
+    }
+}

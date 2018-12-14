@@ -1,0 +1,163 @@
+<view catchtouchmove="{{paper==1&&hongbao.cishushangxian==0?'preventTouchMove':''}}" class="{{paper==1&&hongbao.cishushangxian==0?'population':'onf'}}">
+    <view class="fenlei">
+        <view class="navigation">
+            <view class="daohgf">
+                <form bindsubmit="submitInsearch" class="search" reportSubmit="true">
+                    <button class="kuodaa" formType="submit" hoverClass="none">
+                        <image class="souimg" src="../../resource/images/sou.png"></image>
+                        <text class="soutext">搜索关键字或者标题</text>
+                    </button>
+                </form>
+                <form bindsubmit="submitInxauioxi" class="xiaofisa" reportSubmit="true">
+                    <button class="xiaofisa" formType="submit" hoverClass="none" style="margin-left:0;">
+                        <image src="../../resource/images/xiaoxia.png"></image>
+                        <text>消息</text>
+                    </button>
+                </form>
+            </view>
+        </view>
+        <swiper autoplay="{{autoplay}}" circular="{{circular}}" class="swiper-box" current="{{swiperCurrent}}" indicatorActiveColor="#ffffff" indicatorDots="{{indicatordots}}" style="height:350rpx;">
+            <swiper-item bindtap="detailsaa" class="swiper" data-appid="{{item.xcxappid}}" data-diypic="{{item.diypic}}" data-id="{{item.link}}" data-jump="{{item.jump}}" data-path="{{item.xcxpath}}" wx:for="{{banner}}">
+                <image lazyLoad="true" src="{{item.thumb}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="duochong">
+        <form bindsubmit="submitIntijiao" class="duochong_view" data-cateid="{{item.cateid}}" reportSubmit="true" wx:for="{{nav}}">
+            <button class="kuoda" formType="submit" hoverClass="none">
+                <view class="yuangf">
+                    <image lazyLoad="true" src="{{item.icon}}"></image>
+                </view>
+                <text class="yuanf_text">{{item.name}}</text>
+            </button>
+        </form>
+    </view>
+    <form bindsubmit="submitIntinan" class="zhuti" reportSubmit="true" wx:if="{{yesno.enabled==1}}">
+        <button class="kuoda" formType="submit" hoverClass="none">
+            <image class="zhuti" src="{{yesno.banner}}" wx:if="{{yesno.enabled==1}}"></image>
+        </button>
+    </form>
+    <view class="baokuan">
+        <form bindsubmit="submitInjinri" class="zhutiqiuui" data-id="1" reportSubmit="true" wx:if="{{show.show1!=''}}">
+            <button class="kuoda" formType="submit" hoverClass="none">
+                <image data-id="1" lazyLoad="true" src="{{show.show1}}" wx:if="{{show.show1!=''}}"></image>
+            </button>
+        </form>
+        <form bindsubmit="submitInjinri" class="zhutiqiuui" data-id="2" reportSubmit="true" wx:if="{{show.show2!=''}}">
+            <button class="kuoda" formType="submit" hoverClass="none">
+                <image data-id="2" lazyLoad="true" src="{{show.show2}}" wx:if="{{show.show2!=''}}"></image>
+            </button>
+        </form>
+    </view>
+    <view class="baokuan_two">
+        <form bindsubmit="submitInjinri" class="zhutiqiuuia" data-id="3" reportSubmit="true" wx:if="{{show.show3!=''}}">
+            <button class="kuoda" formType="submit" hoverClass="none">
+                <image data-id="3" lazyLoad="true" src="{{show.show3}}" wx:if="{{show.show3!=''}}"></image>
+            </button>
+        </form>
+        <form bindsubmit="submitInjinri" class="zhutiqiuuia" data-id="4" reportSubmit="true" wx:if="{{show.show4!=''}}">
+            <button class="kuoda" formType="submit" hoverClass="none">
+                <image bindtap="screen" data-id="4" lazyLoad="true" src="{{show.show4}}" wx:if="{{show.show4!=''}}"></image>
+            </button>
+        </form>
+        <form bindsubmit="submitInjinri" class="zhutiqiuuia" data-id="5" reportSubmit="true" wx:if="{{show.show5!=''}}">
+            <button class="kuoda" formType="submit" hoverClass="none">
+                <image bindtap="screen" data-id="5" lazyLoad="true" src="{{show.show5}}" wx:if="{{show.show5!=''}}"></image>
+            </button>
+        </form>
+    </view>
+    <form bindsubmit="submitInfo" class="baohun" reportSubmit="true">
+        <button class="gdzltz" formType="submit" hoverClass="none">
+            <image src="../../resource/images/cai.png"></image>
+            <text>猜你喜欢</text>
+        </button>
+    </form>
+    <view class="sahngf">
+        <view class="sahngf_xun" data-id="{{item.goods_id}}" data-src="{{item.coupon_remain_quantity}}" wx:for="{{toplist}}">
+            <form bindsubmit="submitInfodetails" class="sahngf_xunimg" data-hui="{{item.coupon_remain_quantity}}" data-id="{{item.goods_id}}" reportSubmit="true">
+                <button class="" formType="submit" hoverClass="none">
+                    <image class="sahngf_xunimg" lazyLoad="true" src="{{item.goods_thumbnail_url}}"></image>
+                </button>
+            </form>
+            <view class="sahngf_view">
+                <text bindtap="details" class="sahngf_text" data-hui="{{item.coupon_remain_quantity}}" data-id="{{item.goods_id}}" src="{{item.goods_thumbnail_url}}">{{item.goods_name}}</text>
+                <view class="sahngf_jia">
+                    <form bindsubmit="submitInfodetails" class="sahngf_tree" data-hui="{{item.coupon_remain_quantity}}" data-id="{{item.goods_id}}" reportSubmit="true" src="{{item.goods_thumbnail_url}}">
+                        <button class="sahngf_treebutt" formType="submit" hoverClass="none" style="width:100%;">
+                            <view class="sahngf_trety">
+                                <text>{{item.now_price}}</text>
+                                <text>¥{{item.min_group_price}}</text>
+                            </view>
+                            <view class="sahngf_fore">
+                                <text>券</text>
+                                <text>¥{{item.coupon_discount}}</text>
+                            </view>
+                            <text class="sahngf_five">已拼{{item.sold_quantity}}单</text>
+                        </button>
+                    </form>
+                    <button class="sahngf_six" data-goods_title="{{item.goods_title}}" data-id="{{item.goods_id}}" data-name="{{item.goods_name}}" data-src="{{item.goods_thumbnail_url}}" hidden="{{shenhe==0}}" openType="share">
+                        <image src="../../resource/images/fen.png" wx:if="{{share_icon==''}}"></image>
+                        <image src="{{share_icon}}" wx:if="{{share_icon!=''}}"></image>
+                        <text wx:if="{{config.moneyrate==0&&is_daili==0}}">分享好友</text>
+                        <text wx:if="{{config.moneyrate==0&&is_daili!=0}}">分享赚{{item.commission}}</text>
+                        <text wx:if="{{config.moneyrate!=0}}">分享赚{{item.commission}}</text>
+                    </button>
+                </view>
+            </view>
+        </view>
+        <view class="sahngf_xun" data-id="{{item.goods_id}}" data-src="{{item.coupon_remain_quantity}}" wx:for="{{goodsist}}">
+            <form bindsubmit="submitInfodetails" class="sahngf_xunimg" data-hui="{{item.coupon_remain_quantity}}" data-id="{{item.goods_id}}" reportSubmit="true">
+                <button class="" formType="submit" hoverClass="none">
+                    <image class="sahngf_xunimg" lazyLoad="true" src="{{item.goods_thumbnail_url}}"></image>
+                </button>
+            </form>
+            <view class="sahngf_view">
+                <text bindtap="details" class="sahngf_text" data-hui="{{item.coupon_remain_quantity}}" data-id="{{item.goods_id}}" src="{{item.goods_thumbnail_url}}">{{item.goods_name}}</text>
+                <view class="sahngf_jia">
+                    <form bindsubmit="submitInfodetails" class="sahngf_tree" data-hui="{{item.coupon_remain_quantity}}" data-id="{{item.goods_id}}" reportSubmit="true" src="{{item.goods_thumbnail_url}}">
+                        <button class="sahngf_treebutt" formType="submit" hoverClass="none" style="width:100%;">
+                            <view class="sahngf_trety">
+                                <text>{{item.now_price}}</text>
+                                <text>¥{{item.min_group_price}}</text>
+                            </view>
+                            <view class="sahngf_fore">
+                                <text>券</text>
+                                <text>¥{{item.coupon_discount}}</text>
+                            </view>
+                            <text class="sahngf_five">已拼{{item.sold_quantity}}单</text>
+                        </button>
+                    </form>
+                    <button class="sahngf_six" data-goods_title="{{item.goods_title}}" data-id="{{item.goods_id}}" data-name="{{item.goods_name}}" data-src="{{item.goods_thumbnail_url}}" hidden="{{shenhe==0}}" openType="share">
+                        <image src="../../resource/images/fen.png" wx:if="{{share_icon==''}}"></image>
+                        <image src="{{share_icon}}" wx:if="{{share_icon!=''}}"></image>
+                        <text wx:if="{{config.moneyrate==0&&is_daili==0}}">分享好友</text>
+                        <text wx:if="{{config.moneyrate==0&&is_daili!=0}}">分享赚{{item.commission}}</text>
+                        <text wx:if="{{config.moneyrate!=0}}">分享赚{{item.commission}}</text>
+                    </button>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="qusian" hidden="{{loding}}">
+        <image src="../../resource/images/5-121204193R0-50.gif"></image>
+        <text>加载中...</text>
+    </view>
+</view>
+<view catchtouchmove="ture" class="{{paper==1&&hongbao.cishushangxian==0?'Redenvelopes':'vsa'}}" wx:if="{{paper==1&&hongbao.cishushangxian==0}}">
+    <form bindsubmit="submitInfolopes" class="csa" reportSubmit="true">
+        <button formType="submit" hoverClass="none">
+            <image src="{{hongbao.open_bg}}"></image>
+            <view class="fhsiua"></view>
+        </button>
+    </form>
+</view>
+<view catchtouchmove="true" class="denglu" wx:if="{{shouquan==1}}">
+    <view class="denglu_ong">
+        <image class="denglu_img" lazyLoad="true" src="{{config.loginbg}}" wx:if="{{config.loginbg!=''}}"></image>
+        <view class="liange">
+            <button bindgetuserinfo="getUserInfo" class="register" openType="getUserInfo">
+                <image class="yutyff" src="../../resource/images/180920153751.png"></image>
+            </button>
+        </view>
+    </view>
+</view>

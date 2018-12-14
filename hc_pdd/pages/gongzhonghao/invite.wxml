@@ -1,0 +1,27 @@
+<scroll-view>
+    <view class="toubu">
+        <!-- <image class="shangbinbeiz" src="../../resource/images/ivtus_02.png"></image> -->
+        <view class="invite">
+            <text>邀请码：</text>
+            <text>{{user_id}}</text>
+        </view>
+        <view class="Invitation">
+            <text class="rulse">关联说明</text>
+            <text class="zhifyg">本小程序最高分佣金比例高达90%（与你当前等级相关如代理、总监）</text>
+        </view>
+           <view class="Invitation">
+            <text class="rulse">公众号关联步骤</text>
+            <text class="zhifyg">1.登入公众号后台，关联小程序 wxfa8415cebecfd503</text>
+            <text class="zhifyg">\n2.设置小程序路径 /hc_pdd/pages/yaoqing/yaoqing?user_id={{user_id}}
+</text>
+        </view>
+              <view class="Invitation">
+            <text class="rulse">小程序关联步骤</text>
+            <text class="zhifyg">1.关联小程序 wxfa8415cebecfd503</text>
+            <text class="zhifyg">\n2.设置小程序路径 /hc_pdd/pages/yaoqing/yaoqing?user_id={{user_id}}
+</text>
+        </view>
+    </view>
+
+</scroll-view>
+
