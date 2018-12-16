@@ -86,6 +86,13 @@
                 </view>
             </view>
             <view class="bosy">
+                  <view bindtap="gongzhonghao" class="resquest_one" >
+                    <image class="kedting" src="../../resource/images/di.png"></image>
+                    <view class="yaioqing">
+                        <text>公众号和小程序关联分销</text>
+                        <image class="rightimh" src="../../resource/images/right.png"></image>
+                    </view>
+                </view>
                 <view bindtap="Redenvelopes" class="resquest_one" wx:if="{{paper==1}}">
                     <image class="kedting" src="../../resource/images/0180723145641.png"></image>
                     <view class="yaioqing">
@@ -100,13 +107,7 @@
                         <image class="rightimh" src="../../resource/images/right.png"></image>
                     </view>
                 </view>
-                             <view bindtap="gongzhonghao" class="resquest_one" wx:if="{{is_daili!=0&&fx_level!=0}}">
-                    <image class="kedting" src="../../resource/images/di.png"></image>
-                    <view class="yaioqing">
-                        <text>公众号和小程序关联赚钱</text>
-                        <image class="rightimh" src="../../resource/images/right.png"></image>
-                    </view>
-                </view>
+         
                 <button class="resquest_one" openType="contact" wx:if="{{config.contactway==1}}">
                     <image class="kedting" src="../../resource/images/er.png"></image>
                     <view class="yaioqing">

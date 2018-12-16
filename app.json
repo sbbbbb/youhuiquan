@@ -1,13 +1,13 @@
 {
     "pages": [
         "hc_pdd/pages/index/index",
+        "hc_pdd/pages/yaoqing/yaoqing",
         "hc_pdd/pages/danxhu/danxhu",
         "hc_pdd/pages/gou/gou",
         "hc_pdd/pages/ceshi/ceshi",
         "hc_pdd/pages/geezer/geezer",
         "hc_pdd/pages/education/education",
         "hc_pdd/pages/redpacket/redpacket",
-        "hc_pdd/pages/yaoqing/yaoqing",
         "hc_pdd/pages/details/details",
         "hc_pdd/pages/danye/danye",
         "hc_pdd/pages/team/team",
